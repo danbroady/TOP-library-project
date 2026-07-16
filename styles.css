@@ -32,7 +32,7 @@ button, input, select, fieldset {
     border-radius: 4px;
     background-color: white;
     padding: 10px 40px;
-    transition: all 250ms;
+    transition: 250ms;
 }
 button {
     font-weight: 400;
@@ -141,6 +141,7 @@ form > fieldset > button:hover {
 table {
     border-collapse: collapse;
     width: 100%;
+    min-width: 600px;
     table-layout: fixed;
     word-wrap: break-word;}
 th, td {
@@ -161,15 +162,12 @@ td > button {
 
 #words-col {
     width: 30%;
-    min-width: 130px;
 }
 #pages-col {
-    width: 10%;
-    min-width: 130px;
+    width: 120px;
 }
 #buttons-col {
-    width: 15%;
-    min-width: 120px;
+    width: 120px;
 }
 
 .read-button:hover {
