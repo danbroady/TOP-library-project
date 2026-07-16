@@ -1,0 +1,194 @@
+/* DEFAULT */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button, select, input {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+
+/* General styling */
+a {
+    color: #2882d2;
+}
+
+button, input, select, fieldset {
+    outline: solid 1px #cccccc;
+    border-radius: 4px;
+    background-color: white;
+    padding: 10px 40px;
+    transition: all 250ms;
+}
+button {
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Main styling */
+body {
+    font-family: "Manrope", sans-serif;
+    font-weight: 300;
+    height: 100vh;
+    padding: 5% 10% 0% 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#top {
+    display: flex;
+    gap: 15px;
+}
+h1 {
+    font-size: 48px;
+    font-weight: 500;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+h3 {
+    padding: 15px 0;
+}
+
+
+/* Form styling */
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#inputs-box {
+    /* display: grid;
+    grid-template: 1fr min-content / 1fr 1fr min-content; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+#data-input-select {
+    max-width: 125px;
+}
+.data-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-grow: 1;
+}
+
+label {
+    font-weight: 600;
+}
+input {
+    padding: 10px;
+}
+select {
+    padding: 10px;
+}
+input:hover, select:hover {
+    outline: solid 1px #ababab;
+}
+input:focus, select:focus {
+    outline: solid 1px #33a6ff;
+}
+
+form > fieldset > button {
+    color: white;
+    background-color: #33a6ff;
+    outline:  solid 1px #33a6ff;
+    width: clamp(80px, 25%, 150px);
+}
+form > fieldset > button:hover {
+    background-color: #2f98e9;
+}
+
+
+
+
+/* Table styling */
+#table-container {
+    overflow-x: auto;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;}
+th, td {
+    padding: 15px;
+}
+tr {
+    border-bottom: solid 1px #cccccc;
+}
+td:nth-child(n+3) {
+    text-align: center;
+}
+th {
+    font-weight: 600;
+}
+td > button {
+    width: clamp(70px, 100%, 150px);
+}
+
+#words-col {
+    width: 30%;
+    min-width: 130px;
+}
+#pages-col {
+    width: 10%;
+    min-width: 130px;
+}
+#buttons-col {
+    width: 15%;
+    min-width: 120px;
+}
+
+.read-button:hover {
+    background-color: #f3f3f3;
+    outline: solid 1px #ababab;
+}
+#read-affirm {
+    background-color: #35d46a;
+    outline: solid 1px #35d46a;
+}
+#read-affirm:hover {
+    background-color: #32c864;
+}
+
+.delete-button {
+    color: white;
+    background-color: #d22857;
+    outline: solid 1px #d22857;
+}
+.delete-button:hover {
+    background-color: #c52553;
+}

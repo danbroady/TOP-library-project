@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="./images/favicon.svg" rel="icon">
+</head>
+<body>
+    <header>
+        <div id="top">
+            <img src="./images/favicon.svg" width="75px">
+            <h1>Book Library</h1>
+        </div>
+        <p>An objects & constructors introductory project for <a href="https://www.theodinproject.com" target="_blank">The Odin Project</a>.</p>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <div id="inputs-box">
+                    <div class="data-input">
+                        <label for="name">Book</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="data-input">
+                        <label for="author">Author</label>
+                        <input type="text" id="author">
+                    </div>
+                    <div class="data-input" id="data-input-select">
+                        <label for="status">Status</label>
+                        <select id="status" name="status">
+                            <option value="yes">Read</option>
+                            <option value="no" selected>Not read</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit">Add book</button>
+            </fieldset>
+        </form>
+        <div id="table-container">
+            <table>
+                <colgroup>
+                    <col id="words-col" span="2"/>
+                    <col id="pages-col"/>
+                    <col id="buttons-col" span="2"/>
+                </colgroup>
+                <tr>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th># Pages</th>
+                    <th>Status</th>
+                    <th>&nbsp;</th>
+                </tr>
+                <tr>
+                    <td>Bookname</td>
+                    <td>Person</td>
+                    <td>1234</td>
+                    <td><button class="read-button">Not read</button></td>
+                    <td><button class="delete-button">Remove</button></td>
+                </tr>
+                <tr>
+                    <td>AnotherAnotherAnotherAnotherAnother</td>
+                    <td>BlokeBlokeBlokeBlokeBlokeBlokeBloke</td>
+                    <td>3211243432124241</td>
+                    <td><button class="read-button">Not read</button></td>
+                    <td><button class="delete-button">Remove</button></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <h3>Created by <a href="https://github.com/danbroady">Dan</a></h3>
+    </footer>
+</body>
+</html>
