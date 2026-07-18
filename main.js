@@ -5,15 +5,7 @@ const author_name = document.querySelector("#author");
 const page_count = document.querySelector("#pages");
 const read_input = document.querySelector("#status");
 const btn_add = document.querySelector("#addBtn");
-const btn_delete = document.querySelector(".delete-button");
-removeButton(btn_delete);
-
-
-
-// Event listeners
 form.addEventListener("submit", (e) => {e.preventDefault(); addBook(book_name.value,author_name.value,page_count.value,read_input.value); form.reset()});
-// btn_add.addEventListener("click", () => addBook(book_name.value,author_name.value,page_count.value));
-
 
 
 
@@ -31,8 +23,9 @@ function Book(name, author, pages, status) {
     this.pages = pages;
     this.read = status;
 }
-Book.prototype.readBook = function() {
+Book.prototype.readBook = function(button) {
     this.read = !this.read;
+    this.read==false ? button.textContent="Not read":button.textContent="Read";
 }
 
 function addBook(name, author, pages, status_input) {
@@ -43,6 +36,8 @@ function addBook(name, author, pages, status_input) {
     myLibrary.push(newBook);
     updateLibrary(newBook);}
 
+
+// Add to library
 function updateLibrary(book) {
     const table_body = document.querySelector("table");
     const new_row = table_body.insertRow();
@@ -53,8 +48,9 @@ function updateLibrary(book) {
     
     // Status button
     const new_btn_status = document.createElement('button');
-    book.read==false ? new_btn_status.textContent="Not read":new_btn_status.textContent="Read";
-    new_row.insertCell().appendChild(new_btn_status);
+    // book.read==false ? new_btn_status.textContent="Not read":new_btn_status.textContent="Read";
+    new_row.insertCell().appendChild(statusButton(book, new_btn_status));
+
 
     // Remove button
     const new_btn_delete = document.createElement('button');
@@ -82,6 +78,9 @@ function removeBook(event) {
 }
 
 // Read button functionality
-
-function statusButton(button) {
+function statusButton(book, button) {
+    book.read==false ? button.textContent="Not read":button.textContent="Read";
+    button.classList.add("read-button");
+    button.addEventListener('click', () => (book.readBook(button)));
+    return button;
 }
